@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 5</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  function generatePutRequest()
+  {
+  $.ajax({
+  url: '/putRequest', type: 'PUT',
+  success: function (result) { window.open(result);
+  }
+  });
+  }
+  
+  function generateDeleteRequest()
+  {
+  $.ajax({
+  url: '/deleteRequest', type: 'DELETE',
+  success: function (result) { window.open(result);
+  }
+  });
+  }
+  
+  function generatePutRequest()
+  {
+  $.ajax({
+  url: '/putRequest', type: 'PUT',
+  success: function (result) { window.open(result);
+  }
+  });
+  }
+  
+  function generateOptionRequest()
+  {
+  $.ajax({
+  url: '/optionsRequest', type: 'OPTIONS',
+  success: function (result) { window.open(result);
+  }
+  });
+  }
+  </script>
+</head>
+<body>
+<form action="/getRequest" method="GET">
+<button type="submit">Generate Get Request!</button>
+</form>
+
+<form action="/postRequest" method="POST">
+<h1>Enter Your Name:</h1><input type="text" name="name2" id="name">
+<button type="submit">Generate post Request!</button>
+</form>
+
+<h1>Click Here to Generate Delete Message:</h1><input type="text" name="name3" id="name">
+<button onclick="generateDeleteRequest()" type="submit">Generate Delete Request!</button>
+
+
+<h1>Click Here to Generate put Message:</h1><input type="text" name="name4" id="name">
+<button type="submit" onclick="generatePutRequest()">Generate Put Request!</button>
+
+<button type="submit" onclick="generateOptionRequest()">Generate Option Request!</button>
+</body>
+</html>
+  
